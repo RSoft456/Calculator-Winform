@@ -25,7 +25,7 @@ namespace Calculator
 
         private void b0_Click(object sender, EventArgs e)
         {
-            if(textBox2.Text=="0")
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "0";
                 textBox1.Text = "0";
@@ -39,7 +39,8 @@ namespace Calculator
 
         private void b1_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+           
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "1";
                 textBox1.Text = "1";
@@ -53,7 +54,8 @@ namespace Calculator
 
         private void b2_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+           
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "2";
                 textBox1.Text = "2";
@@ -67,7 +69,8 @@ namespace Calculator
 
         private void b3_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+           
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "3";
                 textBox1.Text = "3";
@@ -81,7 +84,8 @@ namespace Calculator
 
         private void b4_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+           
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "4";
                 textBox1.Text = "4";
@@ -95,7 +99,8 @@ namespace Calculator
 
         private void b5_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+          
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "5";
                 textBox1.Text = "5";
@@ -109,7 +114,8 @@ namespace Calculator
 
         private void b6_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+           
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "6";
                 textBox1.Text = "6";
@@ -123,7 +129,8 @@ namespace Calculator
 
         private void b7_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+          
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "7";
                 textBox1.Text = "7";
@@ -137,7 +144,8 @@ namespace Calculator
 
         private void b8_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+           
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "8";
                 textBox1.Text = "8";
@@ -151,7 +159,7 @@ namespace Calculator
 
         private void b9_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "0")
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
             {
                 textBox2.Text = "9";
                 textBox1.Text = "9";
@@ -164,7 +172,7 @@ namespace Calculator
         }
 
         private void bd2_Click(object sender, EventArgs e)
-        {
+        { 
             int len = textBox2.Text.Length;
             string txt = textBox2.Text;
             bool chk = false;
@@ -173,7 +181,7 @@ namespace Calculator
                 if (txt[i] == '.')
                     chk = true;
             }
-            if (textBox2.Text == "0")
+            if (textBox2.Text == "0" || textBox2.Text == "Undefined")
                 textBox2.Text = "0.";
             else if(chk == true)
                 textBox2.Text = textBox2.Text;
@@ -183,14 +191,20 @@ namespace Calculator
 
         private void bd1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "0")
+            int len = textBox2.Text.Length;
+            string txt = textBox2.Text;
+            bool chk = false;
+            for (int i = 0; i < len; i++)
             {
-                textBox1.Text = "0.";
+                if (txt[i] == '.')
+                    chk = true;
             }
+            if (textBox2.Text == "0")
+                textBox2.Text = "0.";
+            else if (chk == true)
+                textBox2.Text = textBox2.Text;
             else
-            {
-                textBox1.Text = textBox1.Text + ".";
-            }
+                textBox2.Text = textBox2.Text + ".";
         }
 
         private void bc_Click(object sender, EventArgs e)
